@@ -183,7 +183,7 @@
           H
         </div>
         <div>
-          <span class="font-heading font-bold text-lg tracking-tight text-brand-primary block leading-none">Huisvriend</span>
+          <span class="font-heading font-bold text-lg tracking-tight text-brand-primary block leading-none">Huisvriend.nl</span>
           <span class="font-mono text-[0.62rem] uppercase tracking-widest text-brand-text/50 block mt-0.5">5D Bionic Therapy</span>
         </div>
       </a>
@@ -906,10 +906,14 @@
   <footer class="bg-brand-text text-brand-bg/80 rounded-t-[3.5rem] mt-12 pt-16 pb-10 px-6">
     <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10 mb-12">
       <div class="md:col-span-2">
-        <h3 class="font-heading font-bold text-2xl text-white mb-3">Huisvriend</h3>
-        <p class="font-body text-sm opacity-65 max-w-sm leading-relaxed">
+        <h3 class="font-heading font-bold text-2xl text-white mb-3">Huisvriend.nl</h3>
+        <p class="font-body text-sm opacity-65 max-w-sm leading-relaxed mb-4">
           5D Biyonik 8-Pençeli Derin Doku ve Isıtmalı Masaj Teknolojisi. Boyun, omuz, sırt ve bacak kaslarınız için günlük 10 dakikalık kişisel fizyoterapistiniz.
         </p>
+        <div class="space-y-1.5 text-sm font-mono opacity-80">
+          <p>📞 <a href="https://wa.me/31627418354" target="_blank" class="hover:text-brand-accent transition-colors">+31 6 27418354 (06 27418354)</a></p>
+          <p>✉️ <a href="mailto:huisvriend@gmail.com" class="hover:text-brand-accent transition-colors">huisvriend@gmail.com</a></p>
+        </div>
       </div>
 
       <div>
@@ -923,18 +927,18 @@
       </div>
 
       <div>
-        <h4 class="font-mono text-xs uppercase tracking-widest opacity-40 mb-4">Müşteri Güvencesi</h4>
+        <h4 class="font-mono text-xs uppercase tracking-widest opacity-40 mb-4">İletişim & Güvence</h4>
         <ul class="space-y-2.5 text-sm opacity-75">
+          <li>WhatsApp: 06 27418354</li>
+          <li>E-Posta: huisvriend@gmail.com</li>
           <li>30 Gün Koşulsuz İade</li>
           <li>Ücretsiz Takip Kargosu</li>
-          <li>USB Type-C Hızlı Şarj</li>
-          <li>CE & RoHS Sertifikalı</li>
         </ul>
       </div>
     </div>
 
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between border-t border-white/10 pt-6 gap-4">
-      <p class="text-xs font-mono opacity-40">© 2026 Huisvriend. Tüm hakları saklıdır.</p>
+      <p class="text-xs font-mono opacity-40">© 2026 Huisvriend.nl — Tüm hakları saklıdır.</p>
       <div class="flex items-center gap-2">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         <span class="text-xs font-mono opacity-50">Mağaza & Stok Sistemi Aktif</span>
@@ -943,7 +947,7 @@
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/31600000000?text=Merhaba%2C%20Huisvriend%205D%20Masaj%20Aleti%20hakk%C4%B1nda%20bilgi%20ve%20sipari%C5%9F%20deste%C4%9Fi%20almak%20istiyorum."
+  <a href="https://wa.me/31627418354?text=Merhaba%2C%20Huisvriend%205D%20Masaj%20Aleti%20hakk%C4%B1nda%20bilgi%20ve%20sipari%C5%9F%20deste%C4%9Fi%20almak%20istiyorum."
      target="_blank"
      rel="noopener noreferrer"
      id="whatsapp-float"
@@ -1011,10 +1015,10 @@
       feedback.innerHTML = `<strong>Teşekkürler ${name}!</strong><br>${currentBundle.title} (${currentBundle.price}) sipariş talebiniz alındı. Ödeme bağlantısı ve kargo takibi için WhatsApp penceresi açılıyor...`;
 
       const msg = encodeURIComponent(
-        `Merhaba, yeni sipariş vermek istiyorum:\n📦 Paket: ${currentBundle.title} (${currentBundle.price})\n👤 Ad Soyad: ${name}\n📞 Telefon: ${phone}\n📍 Adres: ${address}`
+        `Merhaba, Huisvriend.nl üzerinden yeni sipariş vermek istiyorum:\n📦 Paket: ${currentBundle.title} (${currentBundle.price})\n👤 Ad Soyad: ${name}\n📞 Telefon: ${phone}\n📍 Adres: ${address}`
       );
       setTimeout(() => {
-        window.open(`https://wa.me/31600000000?text=${msg}`, '_blank');
+        window.open(`https://wa.me/31627418354?text=${msg}`, '_blank');
       }, 900);
     }
 
