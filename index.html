@@ -167,7 +167,7 @@
     <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
       <span class="inline-flex items-center gap-1.5">
         <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
-        <span>Tijdelijk 45% Korting + Gratis Verzending in NL &amp; BE</span>
+        <span>Gratis Verzending in NL &amp; BE · Vandaag Besteld, Snel in Huis</span>
       </span>
       <span class="hidden sm:inline opacity-40">|</span>
       <span class="hidden sm:inline">30 Dagen Proefperiode &amp; Niet-Goed-Geld-Terug Garantie</span>
@@ -263,7 +263,7 @@
         <div class="hero-cta flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
           <a href="#order" class="relative overflow-hidden inline-flex items-center justify-center gap-3 bg-brand-accent text-white px-8 py-4 rounded-pill font-heading font-bold text-base magnetic-btn shadow-xl shadow-brand-accent/25">
             <span class="relative z-10 flex items-center gap-2">
-              <span>Bestel met 45% Korting — €54,99</span>
+              <span>Direct Bestellen — €54,99</span>
               <i data-lucide="shopping-bag" class="w-5 h-5"></i>
             </span>
             <span class="absolute inset-0 bg-brand-primary -translate-x-full hover-slide transition-transform duration-500"></span>
@@ -678,7 +678,7 @@
         <!-- Left 7 Cols: Bundle Options -->
         <div class="lg:col-span-7 space-y-4">
           <!-- Option 1 -->
-          <div onclick="selectBundle(1, '1x Huisvriend 5D Massageapparaat', '€54,99', '€99,99')"
+          <div onclick="selectBundle(1, '1x Huisvriend 5D Massageapparaat', '€54,99')"
                id="bundle-1"
                class="bundle-card selected cursor-pointer rounded-card p-6 border-2 border-brand-primary/15 transition-all flex items-center justify-between gap-4">
             <div class="flex items-start gap-4">
@@ -688,23 +688,22 @@
               <div>
                 <div class="flex items-center gap-2.5">
                   <h3 class="font-heading font-bold text-lg text-brand-primary">1x Huisvriend 5D Massageapparaat</h3>
-                  <span class="bg-brand-primary/10 text-brand-primary font-mono text-[0.65rem] px-2.5 py-0.5 rounded-pill">45% Korting</span>
+                  <span class="bg-brand-primary/10 text-brand-primary font-mono text-[0.65rem] px-2.5 py-0.5 rounded-pill">Standaard</span>
                 </div>
                 <p class="text-xs text-brand-text/60 mt-1">1 Apparaat + USB-C Oplaadkabel + Gratis Verzending</p>
               </div>
             </div>
             <div class="text-right shrink-0">
               <span class="font-heading font-extrabold text-2xl text-brand-primary block">€54,99</span>
-              <span class="font-mono text-xs text-brand-text/40 line-through">€99,99</span>
             </div>
           </div>
 
           <!-- Option 2 (Most Popular) -->
-          <div onclick="selectBundle(2, '2x Duo- & Cadeaupakket', '€93,49', '€199,98')"
+          <div onclick="selectBundle(2, '2x Duo- & Cadeaupakket', '€93,49')"
                id="bundle-2"
                class="bundle-card cursor-pointer rounded-card p-6 border-2 border-brand-primary/15 transition-all flex items-center justify-between gap-4 relative">
             <span class="absolute -top-3 right-6 bg-brand-accent text-white font-mono text-[0.65rem] uppercase tracking-wider px-3 py-1 rounded-pill shadow">
-              MEEST GEKOZEN · EXTRA 15% BUNDELKORTING
+              MEEST GEKOZEN · 15% BUNDELVOORDEEL
             </span>
             <div class="flex items-start gap-4">
               <div class="w-6 h-6 rounded-full border-2 border-brand-primary/30 flex items-center justify-center mt-1 shrink-0">
@@ -719,12 +718,11 @@
             </div>
             <div class="text-right shrink-0">
               <span class="font-heading font-extrabold text-2xl text-brand-accent block">€93,49</span>
-              <span class="font-mono text-xs text-brand-text/40 line-through">€199,98</span>
             </div>
           </div>
 
           <!-- Option 3 -->
-          <div onclick="selectBundle(3, '3x Familiepakket', '€129,99', '€299,97')"
+          <div onclick="selectBundle(3, '3x Familiepakket', '€129,99')"
                id="bundle-3"
                class="bundle-card cursor-pointer rounded-card p-6 border-2 border-brand-primary/15 transition-all flex items-center justify-between gap-4">
             <div class="flex items-start gap-4">
@@ -741,7 +739,6 @@
             </div>
             <div class="text-right shrink-0">
               <span class="font-heading font-extrabold text-2xl text-brand-primary block">€129,99</span>
-              <span class="font-mono text-xs text-brand-text/40 line-through">€299,97</span>
             </div>
           </div>
 
@@ -771,7 +768,6 @@
             </div>
             <div class="text-right">
               <span id="summary-price" class="font-heading font-extrabold text-2xl text-brand-accent block">€54,99</span>
-              <span id="summary-old" class="font-mono text-xs text-brand-text/40 line-through">€99,99</span>
             </div>
           </div>
 
@@ -953,9 +949,9 @@
     }
 
     // Bundle Selection
-    let currentBundle = { id: 1, title: '1x Huisvriend 5D Massageapparaat', price: '€54,99', oldPrice: '€99,99' };
-    function selectBundle(id, title, price, oldPrice) {
-      currentBundle = { id, title, price, oldPrice };
+    let currentBundle = { id: 1, title: '1x Huisvriend 5D Massageapparaat', price: '€54,99' };
+    function selectBundle(id, title, price) {
+      currentBundle = { id, title, price };
       document.querySelectorAll('.bundle-card').forEach(card => {
         card.classList.remove('selected');
         const dot = card.querySelector('.bundle-dot');
@@ -975,7 +971,6 @@
       }
       document.getElementById('summary-title').textContent = title;
       document.getElementById('summary-price').textContent = price;
-      document.getElementById('summary-old').textContent = oldPrice;
     }
 
     // Order Form Submission
